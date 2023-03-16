@@ -62,24 +62,21 @@ createApp({
             this.ingredienteDaAggiungere = "";
 
         },
-        /**        
-            controlloCaratteri() {
-            if (this.ingredienteDaAggiungere.length >=5) {
+        controlloCaratteri() {
+            if (this.ingredienteDaAggiungere.length >= 5) {
                 this.errore = false;
-            } else{
+            } else {
                 this.errore = true;
             }
 
         },
-         */
-
         invertiValore(indice) {
             if (!this.todoList[indice].done) {
                 this.todoList[indice].done = true;
-            } else{
+            } else {
                 this.todoList[indice].done = false;
             }
-        },
+        }
     }
 
 }).mount('#app')
