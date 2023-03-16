@@ -19,9 +19,10 @@
         <main class="container">
             <div class="text-center">
                 <input type="text" placeholder="ingrediente" v-model="ingredienteDaAggiungere"
-                    @keyup.enter="aggiungiIngrediente" @keyup="controlloCaratteri">
+                    @keyup.enter="aggiungiIngrediente">
                 <button @click="aggiungiIngrediente">Aggiungi</button>
-                <p v-show="errore" class="red">Inserisci almeno 5 caratteri</p>
+                <p v-show="ingredienteDaAggiungere.length >= 5 ? false:true" class="red">Inserisci almeno 5 caratteri
+                </p>
             </div>
             <div>
                 <ul class="todo-list" v-if="todoList.length > 0">

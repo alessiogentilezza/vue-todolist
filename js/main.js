@@ -62,7 +62,8 @@ createApp({
             this.ingredienteDaAggiungere = "";
 
         },
-        controlloCaratteri() {
+        /**        
+            controlloCaratteri() {
             if (this.ingredienteDaAggiungere.length >=5) {
                 this.errore = false;
             } else{
@@ -70,11 +71,13 @@ createApp({
             }
 
         },
-        invertiValore(indice){
-            if (!this.todoList[indice].done){
-                this.todoList[indice].done=true;
+         */
+
+        invertiValore(indice) {
+            if (!this.todoList[indice].done) {
+                this.todoList[indice].done = true;
             }
-        }
+        },
     }
 
 }).mount('#app')
