@@ -69,6 +69,11 @@ createApp({
                 this.errore = true;
             }
 
+        },
+        invertiValore(indice){
+            if (!this.todoList[indice].done){
+                this.todoList[indice].done=true;
+            }
         }
     }
 

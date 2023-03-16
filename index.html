@@ -25,7 +25,7 @@
             </div>
             <div>
                 <ul class="todo-list" v-if="todoList.length > 0">
-                    <li v-for="(ingrediente,indice) in todoList">
+                    <li v-for="(ingrediente,indice) in todoList" @click="invertiValore(indice)">
                         <span class="todo-text"
                             :class="ingrediente.done==true ?'text-decoration':''">{{ingrediente.text}}</span>
                         <i class="fa-solid fa-xmark" @click="cancellaIngrediente(indice)"></i>
