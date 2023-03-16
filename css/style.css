@@ -44,3 +44,7 @@ button {
 .text-decoration {
     text-decoration-line: line-through;
 }
+
+.red{
+    color: red;
+}

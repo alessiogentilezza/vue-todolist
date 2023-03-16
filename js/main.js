@@ -25,23 +25,24 @@ createApp({
         return {
             indice: 0,
             ingredienteDaAggiungere: "",
+            errore: false,
 
             todoList: [
                 {
                     text: "zucchero",
-                    done: "false"
+                    done: false
                 },
                 {
                     text: "latte",
-                    done: "false"
+                    done: false
                 },
                 {
                     text: "uova",
-                    done: "false"
+                    done: false
                 },
                 {
                     text: "farina",
-                    done: "true"
+                    done: true
                 },
             ]
         }
@@ -54,11 +55,19 @@ createApp({
 
             const ingrediente = {
                 text: this.ingredienteDaAggiungere,
-                done: "false"
+                done: false
             };
 
             this.todoList.unshift(ingrediente);
             this.ingredienteDaAggiungere = "";
+
+        },
+        controlloCaratteri() {
+            if (this.ingredienteDaAggiungere.length >=5) {
+                this.errore = false;
+            } else{
+                this.errore = true;
+            }
 
         }
     }
