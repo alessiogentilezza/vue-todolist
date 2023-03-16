@@ -18,16 +18,16 @@
 
         <main class="container">
             <div class="text-center">
-                <input type="text" placeholder="todo" v-model="">
-                <button @click="">Aggiungi</button>
+                <input type="text" placeholder="ingrediente" v-model="ingredienteDaAggiungere" @keyup.enter="aggiungiIngrediente">
+                <button @click="aggiungiIngrediente">Aggiungi</button>
                 <p>inserisci almeno 5 caratteri</p>
             </div>
             <div>
                 <ul class="todo-list">
-                    <li v-for="(articolo,indice) in todoList">
+                    <li v-for="(ingrediente,indice) in todoList">
                         <span class="todo-text"
-                            :class="articolo.done=='true' ?'text-decoration':''">{{articolo.text}}</span>
-                        <i class="fa-solid fa-xmark" @click="cancellaArticolo(indice)"></i>
+                            :class="ingrediente.done=='true' ?'text-decoration':''">{{ingrediente.text}}</span>
+                        <i class="fa-solid fa-xmark" @click="cancellaIngrediente(indice)"></i>
                     </li>
                 </ul>
             </div>

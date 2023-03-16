@@ -24,6 +24,7 @@ createApp({
     data() {
         return {
             indice: 0,
+            ingredienteDaAggiungere: "",
 
             todoList: [
                 {
@@ -46,8 +47,19 @@ createApp({
         }
     },
     methods: {
-        cancellaArticolo(indice) {
+        cancellaIngrediente(indice) {
             this.todoList.splice(indice, 1);
+        },
+        aggiungiIngrediente() {
+
+            const ingrediente = {
+                text: this.ingredienteDaAggiungere,
+                done: "false"
+            };
+
+            this.todoList.unshift(ingrediente);
+            this.ingredienteDaAggiungere = "";
+
         }
     }
 
