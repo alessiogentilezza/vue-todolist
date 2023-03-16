@@ -1,0 +1,42 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, sans-serif;
+    background-color: rgba(231, 219, 219, 0.918);
+    padding-top: 30px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: rgba(68, 221, 170, 0.514);
+}
+
+.text-center {
+    text-align: center;
+}
+
+button {
+    margin: 10px;
+}
+
+.todo-list {
+    list-style: none;
+    padding-top: 20px;
+}
+
+.todo-list li {
+    border-bottom: 1px solid grey;
+    padding: 10px;
+    display: flex;
+
+}
+
+.todo-text {
+    flex-grow: 1;
+}
