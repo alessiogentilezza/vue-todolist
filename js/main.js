@@ -5,7 +5,6 @@
 
 MILESTONE 1
 Stampare all’interno di una lista HTML un item per ogni todo.
-
 Se la proprietà done è uguale a true, visualizzare il testo del todo sbarrato.
 
 MILESTONE 2
@@ -46,10 +45,10 @@ createApp({
             ]
         }
     },
-    methods() {
-
-    },
-    mounted() {
-
+    methods: {
+        cancellaArticolo(indice) {
+            this.todoList.splice(indice, 1);
+        }
     }
+
 }).mount('#app')
