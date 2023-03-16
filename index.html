@@ -24,8 +24,9 @@
             </div>
             <div>
                 <ul class="todo-list">
-                    <li>
-                        <span class="todo-text">Lorem, ipsum dolor.</span>
+                    <li v-for="(articolo,indice) in todoList">
+                        <span class="todo-text"
+                            :class="articolo.done=='true' ?'text-decoration':''">{{articolo.text}}</span>
                         <i class="fa-solid fa-xmark"></i>
                     </li>
                 </ul>

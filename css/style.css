@@ -40,3 +40,7 @@ button {
 .todo-text {
     flex-grow: 1;
 }
+
+.text-decoration {
+    text-decoration-line: line-through;
+}
